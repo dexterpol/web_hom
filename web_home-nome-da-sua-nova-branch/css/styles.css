@@ -1,0 +1,305 @@
+/* Estilos globais */
+body {
+    font-family: 'Montserrat', sans-serif; 
+}
+
+#inicio {
+    background-image: url("./renderizacao-3d-do-modelo-de-casa\ \(2\).jpg");
+    background-color: transparent; /* Tornar o fundo do banner inicialmente transparente */
+    background-size: cover;
+    background-position: center top; /* Alinhe a imagem no topo */
+    height: 100vh; /* Tamanho total da janela */
+    position: relative;
+    text-align: center; /* Centralizar o conteúdo do cabeçalho verticalmente */
+    padding: 20px 0; /* Espaçamento interno no topo e na parte inferior */
+}
+
+/* Estilos para o logotipo */
+
+
+.navbar-brand img {
+    width: 200px; /* Largura do logotipo */
+    height: auto; /* Altura automática para manter a proporção */
+    align-items: center;
+}
+
+/* Estilos para o menu no topo */
+.navbar {
+    background-color: transparent !important; /* Tornar a barra de navegação inicialmente transparente */
+    transition: background-color 0.3s ease-in-out; /* Adicionar transição de cor de fundo */
+    
+    
+    width: 100%; /* Largura total */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para o menu com fundo preto transparente quando não estiver no topo */
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.7) !important; /* Cor de fundo preto com transparência */
+}
+
+/* Estilos para os links do menu */
+.navbar-nav .nav-link {
+    color: #153454; /* Cor dos links do menu */
+    font-weight: 500;
+    font-size: 18px; /* Tamanho da fonte do menu */
+    transition: color 0.3s ease-in-out;
+    margin-right: 20px; /* Espaçamento à direita entre os itens do menu */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #153454; /* Cor ao passar o mouse nos links do menu */
+}
+
+/* Estilos para o botão de agendamento */
+.agendar-btn {
+    background-color: #153454; /* Cor de fundo azul escuro */
+    color: #fff; /* Cor do texto do botão */
+    font-weight: 500;
+    font-size: 18px; /* Tamanho da fonte do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: none; /* Remover borda do botão */
+    border-radius: 5px; /* Arredondar bordas do botão */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.agendar-btn:hover {
+    background-color: #ffffff; /* Cor de fundo mais escura ao passar o mouse */
+    color: #153454;
+}
+/* Estilos para o menu com fundo transparente no topo do cabeçalho */
+.navbar.bg-transparent {
+    background-color: transparent !important; /* Tornar a barra de navegação inicialmente transparente */
+    transition: background-color 0.3s ease-in-out; /* Adicionar transição de cor de fundo */
+}
+
+/* Estilos para o menu com fundo preto transparente quando não estiver no topo */
+.navbar.bg-black-transparent {
+    background-color: rgba(0, 0, 0, 0.7) !important; /* Cor de fundo preto com transparência */
+    transition: background-color 0.3s ease-in-out; /* Adicionar transição de cor de fundo */
+}
+
+
+/* Estilos para os links do menu */
+.navbar-nav .nav-link {
+    color: white !important; /* Cor dos links do menu */
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #153454 !important; /* Cor ao passar o mouse nos links do menu */
+}
+
+.round-button {
+    position: absolute;
+    bottom: 350px; /* Ajuste essa propriedade para a posição vertical desejada */
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 24px; /* Tamanho da fonte do texto */
+    color: white; /* Cor do interior do texto */
+    font-size: 40px;
+    -webkit-text-stroke: 2px ;
+}
+
+
+.colored-text {
+    background: linear-gradient(90deg, #153454 100%, rgba(255, 0, 0, 0) 50%); /* Defina a cor desejada para a metade esquerda do texto */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+.header-title{
+    color: #153454;
+}
+.small-text{
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+
+
+
+/* Galeria */
+#galeria {
+    background-color: #f2f2f2; /* Cor de fundo da seção de galeria */
+    padding: 50px 0;
+}
+
+.galeria-titulo {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.projeto {
+    position: relative;
+    overflow: hidden;
+}
+
+.projeto img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.projeto-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 123, 255, 0.6); /* Cor da sobreposição com transparência */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.projeto:hover img {
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+}
+
+.projeto:hover .projeto-overlay {
+    opacity: 1; /* Mostra a sobreposição ao passar o mouse */
+}
+
+/* Estilos para a seção "experiencia-obras" */
+#experiencia-obras {
+    background-color: #f2f2f2; /* Cor de fundo da seção */
+    padding: 50px 0;
+}
+
+#experiencia-obras .container {
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+#experiencia-obras h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#experiencia-obras p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+#experiencia-obras .col-md-6 {
+    flex: 1; /* Expande as colunas igualmente */
+}
+
+/* Estilos para os contadores de Obras e Clientes */
+#experiencia-obras .contador {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#experiencia-obras .contagem {
+    font-size: 48px;
+    font-weight: 700;
+    color: #007bff; /* Cor do número da contagem */
+}
+
+#experiencia-obras .contador p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333; /* Cor do texto */
+}
+
+#experiencia-obras .row {
+    justify-content: center; /* Centraliza os contadores horizontalmente */
+}
+
+
+/* Estilos para o botão "Saiba Mais" */
+#experiencia-obras .btn-primary {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    font-size: 18px; /* Tamanho da fonte do botão */
+    border-radius: 5px; /* Borda arredondada */
+    transition: background-color 0.3s ease-in-out; /* Transição suave da cor de fundo */
+
+    /* Efeito de hover */
+    text-decoration: none; /* Remove a decoração de texto padrão */
+}
+
+#experiencia-obras .btn-primary:hover {
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+    color: #fff; /* Cor do texto do botão ao passar o mouse */
+}
+/* Estilize a seção de clientes e o carrossel aqui */
+.clientes {
+    text-align: center;
+    padding: 20px;
+}
+
+.carrossel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: moveCarrossel 10s linear infinite;
+}
+
+
+.cliente img {
+    max-width: 30%;
+    
+}
+
+
+
+
+
+
+
+/* Rodapé */
+#contato {
+    background-color: #333; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto no rodapé */
+    padding: 50px 0;
+}
+
+#contato h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* Formulário de Contato */
+.form-control {
+    background-color: #555; /* Cor de fundo dos campos de formulário */
+    color: #fff; /* Cor do texto nos campos de formulário */
+    border-color: #007bff; /* Cor da borda dos campos de formulário */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.form-control::placeholder {
+    color: #888; /* Cor do texto de espaço reservado nos campos de formulário */
+}
+
+.form-control:focus {
+    background-color: #777; /* Cor de fundo dos campos de formulário ao focar */
+}
+
+/* Ícones de redes sociais no rodapé */
+.list-inline-item a {
+    color: #fff !important; /* Cor dos ícones de redes sociais */
+    font-size: 24px;
+    margin-right: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.list-inline-item a:hover {
+    color: #007bff !important; /* Cor ao passar o mouse sobre os ícones de redes sociais */
+}
