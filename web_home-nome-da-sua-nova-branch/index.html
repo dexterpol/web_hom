@@ -8,7 +8,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -17,7 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <!-- Adicione o link para o Font Awesome para ícones -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     
@@ -29,7 +32,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top"> 
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="./imagens/IMG_20230823_185414_672-removebg-preview.png" alt="Logo da CGN" width="120"> <!-- Substitua "logo-cgn.png" pelo caminho correto do seu logotipo -->
+                    <img src="./imagens/IMG_20230823_185414_672-removebg-preview_preview_rev_1.png" alt="Logo da CGN" width="120"> <!-- Substitua "logo-cgn.png" pelo caminho correto do seu logotipo -->
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -56,10 +59,11 @@
             </div>
         </nav>
         
-            <div class="round-button">
-                <h1 class="header-title">Fale Conosco</h1>
-                <p class="small-text">Com mais de 50 anos de atuação no mercado brasileiro, o Grupo HTB, de origem alemã acumula vasta experiência nos mercados privados de edificações, industrial e infraestrutura e com atuação também nos demais países da América Latina.o</p>
-            </div>
+        <div class= "round-button">
+            <h1 class="header-title">Transfomando sonhos em realidades <span class="white-text"></span></h1>
+            <p class="small-text">Com mais de 50 anos de atuação no mercado brasileiro, o Grupo HTB, de origem alemã acumula vasta experiência nos mercados privados de edificações, industrial e infraestrutura e com atuação também nos demais países da América Latina</p>
+            <a class="button" href="#">fale consoco</a>
+        </div>  
            
        
             
@@ -68,33 +72,58 @@
         
     </header>
 
-
-    <!-- Galeria com retângulos nos projetos -->
     <section id="galeria" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Nossa Galeria de Projetos</h2>
             <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="projeto">
-                        <img src="./imagens/casa_cgn.jpg" alt="Projeto 1" class="img-fluid">
-                        <div class="projeto-overlay"></div>
+                <div class="col-md-6 mb-4">
+                    <!-- Texto à esquerda -->
+                    <div class="projeto-texto">
+                        <h3>Projetos</h3>
+                        <p>O projeto consistiu em um Design de Interiores para uma Casa de Carnes em São Paulo, caracterizada por elementos rústicos. A loja, com aspecto moderno e inovador, conta com uma solução diferenciada que reflete a identidade da marca, buscando também atrair novos clientes. Destaque para o contraste entre os itens em madeira e os revestimentos em branco e preto, criando uma harmonia no ambiente.</p>
+                        <button class="agendar-btn">Todos os projetos</button>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="projeto">
-                        <img src="./imagens/casa_cgn.jpg" alt="Projeto 2" class="img-fluid">
-                        <div class="projeto-overlay"></div>
+                <div class="col-md-6 mb-4">
+                    <!-- Carrossel de imagens -->
+                    <div id="projeto-carousel" class="projeto-carousel">
+                        <div class="projeto-item" draggable="true" ondragstart="dragStart(event)">
+                            <img src="./imagens/predio_cgn.jpg" alt="Projeto 1" class="img-fluid">
+                            <div class="image-text">
+                                <div class="image-text-overlay">
+                                    <p>Projeto pa</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projeto-item" draggable="true" ondragstart="dragStart(event)">
+                            <img src="./imagens/casa_cgn.jpg" alt="Projeto 2" class="img-fluid">
+                            <div class="image-text">
+                                <div class="image-text-overlay">
+                                    <p>Projeto 2</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projeto-item" draggable="true" ondragstart="dragStart(event)">
+                            <img src="./imagens/slide_1.jpg" alt="Projeto 3" class="img-fluid">
+                            <div class="image-text">
+                                <div class="image-text-overlay">
+                                    <p>Projeto 3</p>
+                                </div>
+                            </div>
+                        </div>
+                    
                     </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="projeto">
-                        <img src="imagens/casa_cgn.jpg" alt="Projeto 3" class="img-fluid">
-                        <div class="projeto-overlay"></div>
-                    </div>
+                    <br>
+                    
                 </div>
             </div>
         </div>
     </section>
+
+                
+                
+
+    
+    
 
    <!-- Seção "Experiência" -->
 <section id="experiencia" class="bg-light py-5">
@@ -102,7 +131,7 @@
         <div class="row">
             <div class="col-md-6">
                 <h2>+10 Anos de Experiência</h2>
-                <p>Somos uma empresa baseada na Bahia, especializada em serviços de reforma de casas, prédios e muito mais. Com mais de uma década de experiência, entregamos projetos de alta qualidade, transformando suas ideias em realidade.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas luctus odio, sit amet tincidunt mi auctor eleifend. Ut volutpat posuere erat, vel blandit ipsum porta non. Donec in mi id nisl congue blandit vitae in tortor. Suspendisse aliquam eget dolor ut volutpat. Suspendisse ullamcorper erat nisl, sed scelerisque massa sodales vitae. Donec blandit ornare enim sit amet laoreet. Fusce non diam sed risus suscipit laoreet et eu metus. Aenean at malesuada lectus. Nam turpis est, porta in metus in, semper fermentum orci. Sed luctus tortor ut nunc semper commodo. Fusce mollis, sem non volutpat tincidunt, elit nunc aliquet sapien, eu efficitur tellus ligula sit amet massa. Vestibulum ipsum justo, dictum ac lorem viverra, euismod tristique leo. Vivamus velit eros, ornare eu eleifend ut, posuere ac lacus</p>
             </div>
             <!-- Adicione uma imagem ao lado do texto de Experiência -->
             <div class="col-md-6">
@@ -116,27 +145,63 @@
 <section id="obras-realizadas" class="bg-light py-5">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="contador">
-                            <span class="contagem" data-count="100">110</span>+
-                            <p>Obras</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="contador">
-                            <span class="contagem" data-count="1000">0</span>+
-                            <p>Clientes</p>
-                        </div>
-                    </div>
+            <div class="col-md-4">
+                <div class="contador">
+                    <span class="contagem" id="obras-contagem">0</span>+
+                    <p>Obras</p>
                 </div>
             </div>
-           
-            
+            <div class="col-md-4">
+                <div class="contador">
+                    <span class="contagem" id="clientes-contagem">0</span>+
+                    <p>Clientes</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contador">
+                    <span class="contagem" id="casas-contagem">0</span>+
+                    <p>Casas Construídas</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+<section id="servicos">
+    <div class="container">
+        <h2>Nossos Serviços</h2>
+
+        <p>Oferecemos uma ampla gama de serviços na área de construção civil. Conheça nossas principais áreas de atuação:</p>
+
+        <div class="area-atuacao">
+            <div class="area">
+                <img src="./imagens/casa_cgn.jpg" alt="Construção Residencial">
+                <div class="text-container">
+                    <h3>Construção Residencial</h3>
+                    <p>Construção de casas e residências com alta qualidade e dentro dos prazos estabelecidos.</p>
+                </div>
+            </div>
+
+            <div class="area">
+                <img src="./imagens/casa_cgn.jpg" alt="Construção Comercial">
+                <div class="text-container">
+                    <h3>Construção Comercial</h3>
+                    <p>Projetos e execução de obras comerciais, garantindo um espaço funcional e esteticamente atraente.</p>
+                </div>
+            </div>
+
+            <div class="area">
+                <img src="./imagens/casa_cgn.jpg" alt="Reforma e Ampliação">
+                <div class="text-container">
+                    <h3>Reforma e Ampliação</h3>
+                    <p>Realizamos reformas e ampliações de imóveis, atendendo às necessidades específicas de cada cliente.</p>
+                </div>
+            </div>
+
+            <!-- Adicione mais áreas de atuação conforme necessário -->
+        </div>
+    </div>
+</section>
+
 
     
     
