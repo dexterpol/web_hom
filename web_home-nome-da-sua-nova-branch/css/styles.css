@@ -1,7 +1,11 @@
 /* Estilos globais */
+
+
 body {
     font-family: 'Montserrat', sans-serif; 
+    background-color: #f8f9fa; /* Alterado para branco */
 }
+
 
 #inicio {
     background-image: url("./renderizacao-3d-do-modelo-de-casa\ \(2\).jpg");
@@ -18,7 +22,7 @@ body {
 
 
 .navbar-brand img {
-    width: 200px; /* Largura do logotipo */
+    width: 100px; /* Largura do logotipo */
     height: auto; /* Altura automática para manter a proporção */
     align-items: center;
 }
@@ -93,105 +97,204 @@ body {
     color: #153454 !important; /* Cor ao passar o mouse nos links do menu */
 }
 
+/* Estilizando o contêiner .round-button */
 .round-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
-    bottom: 350px; /* Ajuste essa propriedade para a posição vertical desejada */
+    bottom: 250px; /* Ajuste a posição vertical desejada */
     left: 0;
     right: 0;
     text-align: center;
-    font-size: 24px; /* Tamanho da fonte do texto */
-    color: white; /* Cor do interior do texto */
-    font-size: 40px;
-    -webkit-text-stroke: 2px ;
-}
-
-
-.colored-text {
-    background: linear-gradient(90deg, #153454 100%, rgba(255, 0, 0, 0) 50%); /* Defina a cor desejada para a metade esquerda do texto */
+    max-width: 700px; /* Largura máxima do botão */
+    margin: 0 auto; /* Centralizar horizontalmente */
+  }
+  
+  /* Estilizando o título .header-title */
+  .header-title {
+    font-size: 55px; /* Tamanho da fonte do título */
+    background: linear-gradient(90deg, #153454 52%, white 50%); /* Metade azul escuro, metade branco */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-}
-
-
-.header-title{
+  }
+  
+  /* Estilizando o texto menor .small-text */
+  .small-text {
+    font-size: 14px; /* Tamanho da fonte do texto pequeno */
+    margin: 10px auto; /* Centralizar horizontalmente e adicionar espaço superior */
+  }
+  
+  /* Estilizando o botão .button */
+  .button {
+    display: block;
+    padding: 10px 20px;
+    background-color: #153454;; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    text-align: center;
+    border: none;
+    border-radius: 10px; /* Bordas arredondadas */
+    text-decoration: none;
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
+  }
+  
+  .button:hover {
+    background-color: #ffffff; /* Cor de fundo mais escura ao passar o mouse */
     color: #153454;
+  }
+
+  .projeto-carousel {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    cursor: grabbing;
+    transition: all 0.3s ease-out;
+    
 }
-.small-text{
-    font-size: 14px;
+
+.projeto-item {
+    min-width: 100%;
+    margin-right: 10px; /* Adicionando uma margem entre as imagens */
+    box-sizing: border-box;
+}
+
+.projeto-item:last-child {
+    margin-right: 0; /* Remove a margem da última imagem */
+}
+
+.projeto-item img {
+    width: 100%;
+    height: 100%; /* Para garantir que todas as imagens tenham a mesma altura */
+    display: block;
+    object-fit: cover; /* Manter a proporção e cortar a imagem para preencher */
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5); /* Fundo transparente com opacidade */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.projeto-item:hover .image-text {
+    opacity: 1;
+}
+
+.image-text p {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+
+
+/* Estilo para o botão "Todos os Projetos" */
+.agendar-btn {
+    display: block;
+    
+    background-color: #0056b3; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.agendar-btn:hover {
+    background-color: #003e80; /* Cor de fundo do botão ao passar o mouse */
+}
+
+
+/* Estilo do texto à direita */
+/* Estilos para a seção de projeto (.projeto-texto) */
+.projeto-texto {
+    font-family: 'Montserrat', sans-serif;
+    color: #333; /* Cor padrão para texto */
+    text-align: center; /* Centralizar texto */
+}
+
+.projeto-texto h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #0056b3; /* Cor principal */
+    position: relative;
+}
+
+.projeto-texto h3::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #0056b3; /* Cor principal */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out; /* Efeito de transição para a linha */
+}
+.projeto-texto h3:hover::after {
+    width: 50%; /* Adjust the desired width on hover */
+}
+
+
+/* Estilos para a seção "experiencia-obras" */
+
+/* Estilos para a seção "Experiência" */
+#experiencia {
     text-align: center;
 }
 
-
-
-
-
-
-/* Galeria */
-#galeria {
-    background-color: #f2f2f2; /* Cor de fundo da seção de galeria */
-    padding: 50px 0;
-}
-
-.galeria-titulo {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-.projeto {
+#experiencia h2 {
+    font-weight: bold;
     position: relative;
-    overflow: hidden;
+    margin-bottom: 20px;
+    color: #0056b3; /* Cor principal do site */
 }
 
-.projeto img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-}
-
-.projeto-overlay {
+#experiencia h2::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #0056b3; /* Cor principal do site */
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 123, 255, 0.6); /* Cor da sobreposição com transparência */
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out; /* Efeito de transição para a linha */
 }
 
-.projeto:hover img {
-    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+#experiencia h2:hover::after {
+    width: 50%; /* Largura da linha ao passar o mouse sobre o título */
 }
 
-.projeto:hover .projeto-overlay {
-    opacity: 1; /* Mostra a sobreposição ao passar o mouse */
+#experiencia img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out; /* Efeito de transição para a imagem */
 }
 
-/* Estilos para a seção "experiencia-obras" */
-#experiencia-obras {
-    background-color: #f2f2f2; /* Cor de fundo da seção */
-    padding: 50px 0;
+#experiencia img:hover {
+    transform: scale(1.05); /* Aumenta um pouco o tamanho da imagem no hover */
 }
 
-#experiencia-obras .container {
-    display: flex;
-    justify-content: space-between; /* Distribui os elementos horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-}
-
-#experiencia-obras h2 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-#experiencia-obras p {
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
 
 #experiencia-obras .col-md-6 {
     flex: 1; /* Expande as colunas igualmente */
@@ -210,7 +313,7 @@ body {
 }
 
 #experiencia-obras .contador p {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 400;
     color: #333; /* Cor do texto */
 }
@@ -220,24 +323,48 @@ body {
 }
 
 
-/* Estilos para o botão "Saiba Mais" */
-#experiencia-obras .btn-primary {
-    background-color: #007bff; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto do botão */
-    border: none; /* Remove a borda */
-    padding: 10px 20px; /* Espaçamento interno do botão */
-    font-size: 18px; /* Tamanho da fonte do botão */
-    border-radius: 5px; /* Borda arredondada */
-    transition: background-color 0.3s ease-in-out; /* Transição suave da cor de fundo */
 
-    /* Efeito de hover */
-    text-decoration: none; /* Remove a decoração de texto padrão */
+/* Estilos para a seção "Obras Realizadas" */
+#obras-realizadas {
+    padding: 50px;
+    background-color: #f8f9fa; /* Cor de fundo para a seção */
+    text-align: center;
 }
 
-#experiencia-obras .btn-primary:hover {
-    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
-    color: #fff; /* Cor do texto do botão ao passar o mouse */
+.contador {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #0056b3; /* Cor do retângulo */
+    border-radius: 10px; /* Arredondamento do retângulo */
+    font-family: 'Montserrat', sans-serif; /* Fonte */
+    font-size: 24px;
+    transition: transform 0.3s ease; /* Efeito de transição para hover */
+    cursor: pointer;
+    background-color: #fff;
 }
+
+.contador:hover {
+    transform: scale(1.05); /* Aumentar um pouco o tamanho no hover */
+    box-shadow: 0 0 10px rgba(0, 86, 179, 0.5); /* Sombra no hover */
+    background-color: #0056b3;
+    color: white;
+}
+
+.contagem {
+    font-weight: bold;
+    font-size: 36px; /* Tamanho da contagem */
+    display: inline-block;
+    color: #0056b3; /* Cor da contagem */
+}
+
+/* Estilizando o texto dos contadores */
+.contador p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333; /* Cor do texto */
+}
+
 /* Estilize a seção de clientes e o carrossel aqui */
 .clientes {
     text-align: center;
@@ -259,6 +386,87 @@ body {
 
 
 
+/* Estilos para a seção de serviços */
+#servicos {
+    padding: 50px;
+    background-color: #fff; /* Cor de fundo para a seção de serviços */
+    color: #333; /* Cor do texto */
+    text-align: center;
+}
+
+#servicos h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #0056b3; /* Cor principal */
+    position: relative; /* Adicionando position relative */
+}
+
+/* Adicionar uma linha abaixo do título */
+#servicos h2::after {
+    content: "";
+    display: block;
+    width: 50px; /* Largura da linha */
+    height: 2px;
+    background-color: #0056b3; /* Cor principal */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+#servicos p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#servicos .area-atuacao {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#servicos h2:hover::after {
+
+    width: 50%; /* Largura da linha ao passar o mouse sobre o título */
+}
+#servicos .area-atuacao .area {
+    width: 250px;
+    
+   
+    border-radius: 10px;
+    background-color: #f8f9fa; /* Cor de fundo para cada área de atuação */
+    text-align: left;
+    transition: transform 0.3s ease; /* Adicionando transição */
+    position: relative; /* Adicionando position relative */
+    overflow: hidden; /* Esconder o overflow para a imagem não ultrapassar os limites */
+}
+
+#servicos .area-atuacao .area:hover {
+    transform: translateY(-5px); /* Efeito de elevação no hover */
+}
+
+#servicos .area-atuacao .area img {
+    width: 100%; /* Ajuste a largura da imagem */
+    height: auto; /* Mantenha a proporção da imagem */
+}
+
+#servicos .area-atuacao .area .text-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 86, 179, 0.8); /* Fundo azul transparente */
+    padding: 10px;
+    color: white;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease; /* Transição suave para a opacidade */
+}
+
+#servicos .area-atuacao .area:hover .text-container {
+    opacity: 1; /* Torna o texto visível no hover */
+}
 
 
 
